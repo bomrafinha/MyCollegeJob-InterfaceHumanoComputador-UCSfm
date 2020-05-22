@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9A2F0D42-6538-41D1-9D5D-D8ABEBD97063}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Generics.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Config.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Feed.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Playlist.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Radio.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Social.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="UCSFM.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Generics">
+        <MSBuild Projects="Generics.dproj"/>
+    </Target>
+    <Target Name="Generics:Clean">
+        <MSBuild Projects="Generics.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Generics:Make">
+        <MSBuild Projects="Generics.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Config">
+        <MSBuild Projects="Config.dproj"/>
+    </Target>
+    <Target Name="Config:Clean">
+        <MSBuild Projects="Config.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Config:Make">
+        <MSBuild Projects="Config.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Feed">
+        <MSBuild Projects="Feed.dproj"/>
+    </Target>
+    <Target Name="Feed:Clean">
+        <MSBuild Projects="Feed.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Feed:Make">
+        <MSBuild Projects="Feed.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Playlist">
+        <MSBuild Projects="Playlist.dproj"/>
+    </Target>
+    <Target Name="Playlist:Clean">
+        <MSBuild Projects="Playlist.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Playlist:Make">
+        <MSBuild Projects="Playlist.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Radio">
+        <MSBuild Projects="Radio.dproj"/>
+    </Target>
+    <Target Name="Radio:Clean">
+        <MSBuild Projects="Radio.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Radio:Make">
+        <MSBuild Projects="Radio.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Social">
+        <MSBuild Projects="Social.dproj"/>
+    </Target>
+    <Target Name="Social:Clean">
+        <MSBuild Projects="Social.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Social:Make">
+        <MSBuild Projects="Social.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="UCSFM">
+        <MSBuild Projects="UCSFM.dproj"/>
+    </Target>
+    <Target Name="UCSFM:Clean">
+        <MSBuild Projects="UCSFM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="UCSFM:Make">
+        <MSBuild Projects="UCSFM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Generics;Config;Feed;Playlist;Radio;Social;UCSFM"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Generics:Clean;Config:Clean;Feed:Clean;Playlist:Clean;Radio:Clean;Social:Clean;UCSFM:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Generics:Make;Config:Make;Feed:Make;Playlist:Make;Radio:Make;Social:Make;UCSFM:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

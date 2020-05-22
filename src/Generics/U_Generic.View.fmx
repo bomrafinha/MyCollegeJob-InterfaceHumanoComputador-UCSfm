@@ -1,0 +1,28 @@
+object GenericView: TGenericView
+  Left = 0
+  Top = 0
+  ClientHeight = 543
+  ClientWidth = 426
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object RectangleContent: TRectangle
+    Align = Client
+    Fill.Color = claBlack
+    Size.Width = 426.000000000000000000
+    Size.Height = 543.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object VertScrollBoxContent: TVertScrollBox
+      Align = Client
+      Size.Width = 426.000000000000000000
+      Size.Height = 543.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 426.000000000000000000
+      Viewport.Height = 543.000000000000000000
+    end
+  end
+end

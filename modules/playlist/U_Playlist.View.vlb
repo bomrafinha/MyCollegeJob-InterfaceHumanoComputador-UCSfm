@@ -1,0 +1,17 @@
+﻿[VertScrollBoxContent]
+Coordinates=700,10,121,33
+
+[RectangleContent]
+Coordinates=710,60,102,33
+
+[ImageList1]
+Coordinates=138,55,68,33
+
+[Timer1]
+Coordinates=79,55,48,33
+
+[]
+Coordinates=0,0,82,33
+ExplicitSubNodes=
+Visible=True
+
